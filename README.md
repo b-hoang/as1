@@ -1,2 +1,2 @@
 # as1
-CMPUT 301 (W16Thursday) Lab Assignment 1
+CMPUT 301 Lab Assignment 1
