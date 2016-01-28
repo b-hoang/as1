@@ -18,6 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".newEntryActivity" />
+        <activity android:name=".viewLogsActivity"></activity>
     </application>
 
 </manifest>

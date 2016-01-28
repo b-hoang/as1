@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">bhoang2-FuelTrack</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Text Strings -->
     <string name="text_date">Date (yyyy-mm-dd):</string>
     <string name="text_station">Station Name:</string>
     <string name="text_odometer">Odometer Reading (km):</string>
@@ -8,6 +10,9 @@
     <string name="text_fuelAmount">Fuel Amount (L):</string>
     <string name="text_fuelUnitCost">Fuel Unit Cost (cents/L):</string>
     <string name="text_fuelCost">Fuel Cost ($x.xx):</string>
+    <string name="text_selectOption">Please select an option:</string>
+
+    <!-- Edit Strings -->
     <string name="edit_date">Enter a date</string>
     <string name="edit_station">Enter gas station</string>
     <string name="edit_odometer">Enter odometer reading</string>
@@ -15,5 +20,10 @@
     <string name="edit_fuel_amount">Enter fuel amount</string>
     <string name="edit_fuel_unit_cost">Enter fuel unit cost</string>
     <string name="edit_fuel_cost">Enter fuel cost</string>
+
+    <!-- Button Strings -->
     <string name="button_add">Add</string>
+    <string name="button_back">Back</string>
+    <string name="button_newEntry">Add New Entry</string>
+    <string name="button_viewEntries">View Log Entries</string>
 </resources>

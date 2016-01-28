@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="bruce_hoang.bhoang2_fueltrack.newEntryActivity"
+    android:id="@+id/newEntryActivity">
+
+    <!-- Date -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:text="@string/text_date"
+        android:id="@+id/text_date"
+        android:layout_gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/edit_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:hint="@string/edit_date"
+        android:inputType="date"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Station -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:text="@string/text_station"
+        android:id="@+id/textView_Station"
+        android:layout_gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/edit_station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:hint="@string/edit_station"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Odometer Reading -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:text="@string/text_odometer"
+        android:id="@+id/textView_Odometer"
+        android:layout_gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/edit_odometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:hint="@string/edit_odometer"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Fuel Grade -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:text="@string/text_fuelGrade"
+        android:id="@+id/textView_fuelGrade"
+        android:layout_gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/edit_fuel_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:hint="@string/edit_fuel_grade"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Fuel Amount -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:text="@string/text_fuelAmount"
+        android:id="@+id/textView_fuelAmount"
+        android:layout_gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/edit_fuel_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:hint="@string/edit_fuel_amount"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Fuel Unit Cost -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:text="@string/text_fuelUnitCost"
+        android:id="@+id/textView_fuelUnitCost"
+        android:layout_gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/edit_fuel_unit_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:hint="@string/edit_fuel_unit_cost"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Fuel Cost -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:text="@string/text_fuelCost"
+        android:id="@+id/textView_fuelCost"
+        android:layout_gravity="center_horizontal"/>
+    <EditText
+        android:id="@+id/edit_fuel_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:hint="@string/edit_fuel_cost"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_add"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
