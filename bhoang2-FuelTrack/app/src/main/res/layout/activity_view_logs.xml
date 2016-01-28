@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Hello! This has not been finished yet. :) Have a pleasant day. "
-        android:id="@+id/textView"
         android:gravity="center_horizontal"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
