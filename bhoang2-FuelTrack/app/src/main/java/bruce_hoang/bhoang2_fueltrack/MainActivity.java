@@ -17,8 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
 
         Button viewLogsButton = (Button) findViewById(R.id.view_entries);
         Button newEntryButton = (Button) findViewById(R.id.new_entry);
@@ -59,13 +57,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonAddNewEntry(View view){
-        // Do something
+        // Starts New Entry Activity
         Intent intent = new Intent(MainActivity.this, newEntryActivity.class);
         startActivity(intent);
     }
 
     public void buttonViewLogs(View view){
-        // Do something
+        // Starts View Log Activity
         Intent intent = new Intent(MainActivity.this, viewLogsActivity.class);
         startActivity(intent);
     }
