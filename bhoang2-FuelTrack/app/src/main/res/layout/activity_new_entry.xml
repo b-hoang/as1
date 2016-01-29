@@ -16,7 +16,13 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout">
+        android:id="@+id/linearLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/add"
+        android:layout_alignParentTop="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -153,22 +159,22 @@
         android:layout_height="wrap_content"
         android:text="@string/button_add"
         android:layout_gravity="center_horizontal"
+        android:paddingLeft="64dp"
+        android:paddingRight="64dp"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/back"
-        android:layout_toEndOf="@+id/back"
-        android:paddingLeft="72dp"
-        android:paddingRight="72dp"
-        />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
     <Button
-        android:id="@+id/back"
+        android:id="@+id/cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_back"
+        android:text="@string/button_cancel"
         android:layout_gravity="center_horizontal"
-        android:paddingLeft="72dp"
-        android:paddingRight="72dp"
-        android:layout_alignBottom="@+id/add"
+        android:paddingLeft="54dp"
+        android:paddingRight="54dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout" />
 
 </RelativeLayout>

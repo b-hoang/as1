@@ -23,7 +23,8 @@
 
     <!-- Button Strings -->
     <string name="button_add">Add</string>
-    <string name="button_back">Back</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_edit">Edit</string>
     <string name="button_newEntry">Add New Entry</string>
     <string name="button_viewEntries">View Log Entries</string>
 </resources>
