@@ -2,7 +2,7 @@ package bruce_hoang.bhoang2_fueltrack;
 
 import android.os.Bundle;
 
-public class viewLogsActivity extends MainActivity {
+public class selectLogActivity extends MainActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

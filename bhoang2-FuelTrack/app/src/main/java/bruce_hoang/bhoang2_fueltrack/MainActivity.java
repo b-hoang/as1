@@ -10,8 +10,20 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    protected static final String FILENAME = "file.sav";
+    protected EditText date;
+    protected EditText station;
+    protected EditText odometer;
+    protected EditText fuelGrade;
+    protected EditText fuelAmount;
+    protected EditText fuelUnitCost;
+    protected EditText fuelCost;
+    protected ArrayList<entryLog> entryLogs = new ArrayList<entryLog>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

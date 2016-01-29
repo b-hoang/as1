@@ -8,7 +8,6 @@ public class entryLog {
     private float odometer, fuelAmount, fuelUnitCost, fuelCost;
 
     private entryLog(){
-
     }
 
     public entryLog(String date, String station, String fuelGrade, float odometer,
@@ -20,6 +19,13 @@ public class entryLog {
         this.fuelAmount = fuelAmount;
         this.fuelUnitCost = fuelUnitCost;
         this.fuelCost = fuelCost;
-
     }
+
+    @Override
+    public String toString(){
+        return("Date: " + date + "\nStation: " + station + "\nOdometer Reading: " + odometer +
+                "\nFuel Grade: " + fuelGrade + "\nFuel Amount: " + fuelAmount + "\nFuel Unit Cost: "
+                + fuelUnitCost + "\nFuel Cost: " + fuelCost);
+    }
+
 }
