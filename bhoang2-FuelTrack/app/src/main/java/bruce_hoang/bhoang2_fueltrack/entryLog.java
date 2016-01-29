@@ -3,15 +3,15 @@ package bruce_hoang.bhoang2_fueltrack;
 /**
  * Created by Bruce-PC on 1/27/2016.
  */
-public class entryLog {
+public class entryLog extends newEntryActivity {
     private String date, station, fuelGrade;
-    private float odometer, fuelAmount, fuelUnitCost, fuelCost;
+    private double odometer, fuelAmount, fuelUnitCost, fuelCost;
 
     private entryLog(){
     }
 
-    public entryLog(String date, String station, String fuelGrade, float odometer,
-                    float fuelAmount, float fuelUnitCost, float fuelCost){
+    public entryLog(String date, String station, double odometer, String fuelGrade,
+                    double fuelAmount, double fuelUnitCost, double fuelCost){
         this.date = date;
         this.station = station;
         this.odometer = odometer;

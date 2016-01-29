@@ -10,10 +10,20 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 
 import com.google.gson.Gson;
 
 public class newEntryActivity extends MainActivity {
+    private EditText date;
+    private EditText station;
+    private EditText odometer;
+    private EditText fuelGrade;
+    private EditText fuelAmount;
+    private EditText fuelUnitCost;
+    private EditText fuelCost;
+
+    private ArrayList<entryLog> entryLogs = new ArrayList<entryLog>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,22 +40,22 @@ public class newEntryActivity extends MainActivity {
         fuelCost = (EditText) findViewById(R.id.edit_fuel_cost);
 
         Button cancelButton = (Button) findViewById(R.id.cancel);
-//        Button newEntryButton = (Button) findViewById(R.id.new_entry);
+        Button newEntryButton = (Button) findViewById(R.id.new_entry);
 
-        /*newEntryButton.setOnClickListener(new View.OnClickListener() {
+        newEntryButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 buttonAddNewEntry(v);
             }
-        });*/
+        });
 
         cancelButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 finish();
             }
-
         });
 
     }
+
     private void saveInFile() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME,0);
@@ -63,4 +73,5 @@ public class newEntryActivity extends MainActivity {
             throw new RuntimeException();
         }
     }
+
 }

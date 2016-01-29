@@ -18,7 +18,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_above="@+id/edit">
+        android:layout_above="@+id/linearLayout2">
 
         <TextView
             android:layout_width="wrap_content"
@@ -148,28 +148,29 @@
             android:singleLine="true"/>
     </LinearLayout>
 
-    <!-- Button -->
-    <Button
-        android:id="@+id/edit"
-        android:layout_width="wrap_content"
+    <!-- Buttons -->
+    <LinearLayout
         android:layout_height="wrap_content"
-        android:text="@string/button_edit"
-        android:layout_gravity="center_horizontal"
-        android:paddingLeft="64dp"
-        android:paddingRight="64dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:id="@+id/linearLayout2"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_centerHorizontal="true">
+
     <Button
         android:id="@+id/cancel"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
         android:layout_height="wrap_content"
-        android:text="@string/button_cancel"
-        android:layout_gravity="center_horizontal"
-        android:paddingLeft="54dp"
-        android:paddingRight="54dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/edit" />
+        android:text="@string/button_cancel" />
+
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"
+        android:text="@string/button_edit"
+        android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
 </RelativeLayout>
