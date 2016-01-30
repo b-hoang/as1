@@ -10,41 +10,58 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.util.ArrayList;
 
 import com.google.gson.Gson;
 
 public class newEntryActivity extends MainActivity {
-    private EditText date;
-    private EditText station;
-    private EditText odometer;
-    private EditText fuelGrade;
-    private EditText fuelAmount;
-    private EditText fuelUnitCost;
-    private EditText fuelCost;
 
-    private ArrayList<entryLog> entryLogs = new ArrayList<entryLog>();
+    // Instantiate variables
+    private EditText tDate;
+    private EditText tStation;
+    private EditText tOdometer;
+    private EditText tFuelGrade;
+    private EditText tFuelAmount;
+    private EditText tFuelUnitCost;
+    private EditText tFuelCost;
+
+    entryLogList entryLogs = new entryLogList();
+//    private ArrayAdapter<entryLog> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_entry);
 
-//        Variables for date, station, fuel, etc...
-        date = (EditText) findViewById(R.id.edit_date);
-        station = (EditText) findViewById(R.id.edit_station);
-        odometer = (EditText) findViewById(R.id.edit_odometer);
-        fuelGrade = (EditText) findViewById(R.id.edit_fuel_grade);
-        fuelAmount = (EditText) findViewById(R.id.edit_fuel_amount);
-        fuelUnitCost = (EditText) findViewById(R.id.edit_fuel_unit_cost);
-        fuelCost = (EditText) findViewById(R.id.edit_fuel_cost);
+//        Get inputs for date, station, fuel, etc...
+        tDate = (EditText) findViewById(R.id.edit_date);
+        tStation = (EditText) findViewById(R.id.edit_station);
+        tOdometer = (EditText) findViewById(R.id.edit_odometer);
+        tFuelGrade = (EditText) findViewById(R.id.edit_fuel_grade);
+        tFuelAmount = (EditText) findViewById(R.id.edit_fuel_amount);
+        tFuelUnitCost = (EditText) findViewById(R.id.edit_fuel_unit_cost);
+        tFuelCost = (EditText) findViewById(R.id.edit_fuel_cost);
 
         Button cancelButton = (Button) findViewById(R.id.cancel);
-        Button newEntryButton = (Button) findViewById(R.id.new_entry);
+        Button addEntryButton = (Button) findViewById(R.id.add);
 
-        newEntryButton.setOnClickListener(new View.OnClickListener() {
+        addEntryButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                buttonAddNewEntry(v);
+                // Taken from http://stackoverflow.com/questions/7129448/how-can-i-get-the-value-of-an-android-edittext-component-as-an-integer on Jan 30, 2016
+                String date = tDate.toString();
+                String station = tStation.toString();
+                Double odometer = Double.parseDouble(tOdometer.getText().toString());
+                String fuelGrade = tFuelGrade.toString();
+                Double fuelAmount = Double.parseDouble(tFuelAmount.getText().toString());
+                Double fuelUnitCost = Double.parseDouble(tFuelUnitCost.getText().toString());
+                Double fuelCost = Double.parseDouble(tFuelCost.getText().toString());
+
+
+                entryLog entry = new entryLog(date, station, odometer, fuelGrade, fuelAmount,
+                        fuelUnitCost, fuelCost);
+                entryLogs.addEntry(entry);
+
+                saveInFile();
+                finish();
             }
         });
 
@@ -58,7 +75,7 @@ public class newEntryActivity extends MainActivity {
 
     private void saveInFile() {
         try {
-            FileOutputStream fos = openFileOutput(FILENAME,0);
+            FileOutputStream fos = openFileOutput(FILENAME, 0);
 
             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
             Gson gson = new Gson();
