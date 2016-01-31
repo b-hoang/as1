@@ -35,8 +35,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:hint="@string/edit_date"
-            android:layout_gravity="center_horizontal"
-            android:singleLine="true"/>
+            android:inputType="date"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"

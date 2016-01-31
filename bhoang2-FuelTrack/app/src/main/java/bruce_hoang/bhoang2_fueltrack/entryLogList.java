@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Taken from lonelyTwitter Jan-29-2016
  */
 public class entryLogList {
-    private ArrayList<entryLog> entryLogs =  new ArrayList<entryLog>();
+    private ArrayList<entryLog> entryLogs = new ArrayList<>();
 
     public void addEntry(entryLog entry){
         entryLogs.add(entry);
@@ -28,5 +28,4 @@ public class entryLogList {
     public int getCount(){
         return entryLogs.size();
     }
-    
 }

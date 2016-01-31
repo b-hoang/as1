@@ -10,7 +10,9 @@ import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
+
     protected static final String FILENAME = "file.sav";
+    protected entryLogList entryLogs = new entryLogList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

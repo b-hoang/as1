@@ -10,8 +10,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 public class newEntryActivity extends MainActivity {
 
@@ -24,8 +27,7 @@ public class newEntryActivity extends MainActivity {
     private EditText tFuelUnitCost;
     private EditText tFuelCost;
 
-    entryLogList entryLogs = new entryLogList();
-//    private ArrayAdapter<entryLog> adapter;
+//    private entryLogList entryLogs = new entryLogList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,14 +75,16 @@ public class newEntryActivity extends MainActivity {
 
     }
 
+
+    // Taken from https://github.com/SRomansky/lonelyTwitter/blob/w16Thursday/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java, Jan 31, 2016
     private void saveInFile() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME, 0);
-
             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
-            Gson gson = new Gson();
-            gson.toJson(entryLogs, out);
-            out.flush();
+//            Gson gson = new Gson();
+//            gson.toJson(entryLogs, out);
+//            out.flush();
+            fos.write(new String(entryLogs.toString()).getBytes());
             fos.close();
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
