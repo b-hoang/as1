@@ -20,7 +20,7 @@ public class entryLog extends newEntryActivity {
         this.date = date;
         this.station = station;
         this.odometer = odometer;
-        this.fuelGrade = fuelGrade;;
+        this.fuelGrade = fuelGrade;
         this.fuelAmount = fuelAmount;
         this.fuelUnitCost = fuelUnitCost;
         this.fuelCost = fuelCost;
