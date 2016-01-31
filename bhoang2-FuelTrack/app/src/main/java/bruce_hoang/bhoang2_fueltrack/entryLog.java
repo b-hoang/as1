@@ -12,8 +12,8 @@ public class entryLog extends newEntryActivity {
     private double fuelUnitCost;
     private double fuelCost;
 
-    public entryLog(){
-    }
+//    public entryLog(){
+//    }
 
     public entryLog(String date, String station, double odometer, String fuelGrade,
                     double fuelAmount, double fuelUnitCost, double fuelCost){
@@ -27,6 +27,7 @@ public class entryLog extends newEntryActivity {
     }
 
 //    Taken from https://en.wikipedia.org/wiki/Gson, Jan 31, 2016
+//    Converts the entry log to a string.
     @Override
     public String toString(){
 /*        StringBuilder sb = new StringBuilder();
@@ -42,7 +43,7 @@ public class entryLog extends newEntryActivity {
         return sb.toString();*/
         return("Date: " + date + "\nStation: " + station + "\nOdometer Reading: " + odometer +
                 "\nFuel Grade: " + fuelGrade + "\nFuel Amount: " + fuelAmount + "\nFuel Unit Cost: "
-                + fuelUnitCost + "\nFuel Cost: " + fuelCost);
+                + fuelUnitCost + "\nFuel Cost: " + fuelCost + "\n");
     }
 
 }

@@ -5,11 +5,12 @@
     <!-- Text Strings -->
     <string name="text_date">Date (yyyy-mm-dd):</string>
     <string name="text_station">Station Name:</string>
-    <string name="text_odometer">Odometer Reading (km):</string>
+    <string name="text_odometer">Odometer Reading (x.x km):</string>
     <string name="text_fuelGrade">Fuel Grade:"</string>
-    <string name="text_fuelAmount">Fuel Amount (L):</string>
-    <string name="text_fuelUnitCost">Fuel Unit Cost (cents/L):</string>
+    <string name="text_fuelAmount">Fuel Amount (x.xxx L):</string>
+    <string name="text_fuelUnitCost">Fuel Unit Cost (x.x cents/L):</string>
     <string name="text_fuelCost">Fuel Cost ($x.xx):</string>
+
     <string name="text_selectOption">Please select an option:</string>
 
     <!-- Edit Strings -->
@@ -24,6 +25,7 @@
     <!-- Button Strings -->
     <string name="button_add">Add</string>
     <string name="button_cancel">Cancel</string>
+    <string name="button_calculate">Calculate</string>
     <string name="button_edit">Edit</string>
     <string name="button_newEntry">Add New Entry</string>
     <string name="button_viewEntries">View Log Entries</string>

@@ -36,7 +36,8 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:hint="@string/edit_date"
             android:inputType="date"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:singleLine="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,6 +73,8 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:hint="@string/edit_odometer"
             android:layout_gravity="center_horizontal"
+            android:inputType="numberDecimal"
+            android:digits=".1234567890"
             android:singleLine="true"/>
 
         <TextView
@@ -109,6 +112,8 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:hint="@string/edit_fuel_amount"
             android:layout_gravity="center_horizontal"
+            android:inputType="numberDecimal"
+            android:digits=".1234567890"
             android:singleLine="true"/>
 
         <TextView
@@ -127,6 +132,8 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:hint="@string/edit_fuel_unit_cost"
             android:layout_gravity="center_horizontal"
+            android:inputType="numberDecimal"
+            android:digits=".1234567890"
             android:singleLine="true"/>
 
         <TextView
@@ -138,14 +145,20 @@
             android:id="@+id/textView_fuelCost"
             android:layout_gravity="center_horizontal"/>
 
-        <EditText
-            android:id="@+id/edit_fuel_cost"
+        <Button
+            android:id="@+id/calculate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:hint="@string/edit_fuel_cost"
-            android:layout_gravity="center_horizontal"
-            android:singleLine="true"/>
+            android:text="@string/button_calculate"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/fuel_cost"
+            android:layout_gravity="center_horizontal" />
+
     </LinearLayout>
 
     <!-- Buttons -->

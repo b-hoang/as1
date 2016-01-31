@@ -5,7 +5,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -41,9 +40,9 @@ public class viewLogsActivity extends MainActivity {
     protected void onStart() {
     // TODO Auto-generated method stub
         super.onStart();
-        String[] entryLogs = loadFromFile();
-       ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                R.layout.list_item, entryLogs);
+        String[] entryLog = loadFromFile();
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                R.layout.list_item, entryLog);
         entryLogListView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
