@@ -1,70 +1,86 @@
 package bruce_hoang.bhoang2_fueltrack;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
+import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
+import java.text.DecimalFormat;
 
 public class viewLogsActivity extends MainActivity {
 
-    private ListView entryLogListView;
+    private TextView Date;
+    private TextView Station;
+    private TextView Odometer;
+    private TextView FuelGrade;
+    private TextView FuelAmount;
+    private TextView FuelUnitCost;
+    private TextView FuelCost;
+    private entryLog entryLog = new entryLog();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_logs);
 
-        entryLogListView = (ListView) findViewById(R.id.listView);
+        Date = (TextView) findViewById(R.id.display_date);
+        Station = (TextView) findViewById(R.id.display_station);
+        Odometer = (TextView) findViewById(R.id.display_odometer);
+        FuelGrade = (TextView) findViewById(R.id.display_fuel_grade);
+        FuelAmount = (TextView) findViewById(R.id.display_fuel_amount);
+        FuelUnitCost = (TextView) findViewById(R.id.display_fuel_unit_cost);
+        FuelCost = (TextView) findViewById(R.id.display_fuel_cost);
+
         Button cancelButton = (Button) findViewById(R.id.cancel);
+        Button editButton = (Button) findViewById(R.id.edit);
 
 //        Cancel button
         cancelButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 finish();
             }
-
         });
 
+//        Edit button
+        editButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                buttonEditLog(v);
+            }
+        });
     }
 
 //    Taken from https://github.com/SRomansky/lonelyTwitter/blob/f15monday/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java, Jan 31, 2016
-@Override
+    @Override
     protected void onStart() {
     // TODO Auto-generated method stub
         super.onStart();
-        String[] entryLog = loadFromFile();
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                R.layout.list_item, entryLog);
-        entryLogListView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+        loadFromFile();
+
+        if (entryLogs.getCount() > 0) {
+            entryLog = entryLogs.getEntry(0);
+            displayLogInfo();
+        }
     }
 
-    private String[] loadFromFile() {
-        ArrayList<String> entryLogs = new ArrayList<String>();
-        try {
-            FileInputStream fis = openFileInput(FILENAME);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-            String line = in.readLine();
-            while (line != null) {
-                entryLogs.add(line);
-                line = in.readLine();
-            }
+    private void displayLogInfo(){
+        // Decimal Formats
+        // Taken from http://javarevisited.blogspot.ca/2012/03/how-to-format-decimal-number-in-java.html, Jan 31, 2016
+        DecimalFormat df1 = new DecimalFormat("#0.0");
+        DecimalFormat df3 = new DecimalFormat("#0.000");
 
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return entryLogs.toArray(new String[entryLogs.size()]);
+        Date.setText(entryLog.getDate());
+        Station.setText(entryLog.getStation());
+        Odometer.setText(df1.format(entryLog.getFuelCost()));
+        FuelGrade.setText(entryLog.getFuelGrade());
+        FuelAmount.setText(df3.format(entryLog.getFuelAmount()));
+        FuelUnitCost.setText(df1.format(entryLog.getFuelUnitCost()));
+        FuelCost.setText(DecimalFormat.getCurrencyInstance().format(entryLog.getFuelCost()));
+    }
+
+    public void buttonEditLog(View view){
+        // Starts View Log Activity
+        Intent intent = new Intent(viewLogsActivity.this, editEntryActivity.class);
+        startActivity(intent);
     }
 }

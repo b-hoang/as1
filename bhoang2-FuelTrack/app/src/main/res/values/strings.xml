@@ -24,9 +24,11 @@
 
     <!-- Button Strings -->
     <string name="button_add">Add</string>
+    <string name="button_save">Save</string>
     <string name="button_cancel">Cancel</string>
     <string name="button_calculate">Calculate</string>
     <string name="button_edit">Edit</string>
     <string name="button_newEntry">Add New Entry</string>
     <string name="button_viewEntries">View Log Entries</string>
+    <string name="button_clear_entries">Clear All Log Entries</string>
 </resources>

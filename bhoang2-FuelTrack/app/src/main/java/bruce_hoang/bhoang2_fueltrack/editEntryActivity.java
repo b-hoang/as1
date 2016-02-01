@@ -8,7 +8,12 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
-public class newEntryActivity extends MainActivity {
+/**
+ * Created by Bruce-PC on 1/31/2016.
+ * This Activity is for editing an entry log. You can change the values to any of the fields
+ * and then it saves the log.
+ */
+public class editEntryActivity extends MainActivity {
 
     // Instantiate variables
     private EditText tDate;
@@ -18,11 +23,12 @@ public class newEntryActivity extends MainActivity {
     private EditText tFuelAmount;
     private EditText tFuelUnitCost;
     private TextView FuelCost;
+    private entryLog entryLog = new entryLog();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_entry);
+        setContentView(R.layout.activity_edit_entry);
 
 //        Get inputs for date, station, fuel, etc...
         tDate = (EditText) findViewById(R.id.edit_date);
@@ -34,7 +40,7 @@ public class newEntryActivity extends MainActivity {
         FuelCost = (TextView) findViewById(R.id.fuel_cost);
 
         Button cancelButton = (Button) findViewById(R.id.cancel);
-        Button addEntryButton = (Button) findViewById(R.id.add);
+        Button saveEntryButton = (Button) findViewById(R.id.save);
         Button calculateButton = (Button) findViewById(R.id.calculate);
 
         calculateButton.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +54,7 @@ public class newEntryActivity extends MainActivity {
             }
         });
 
-        addEntryButton.setOnClickListener(new View.OnClickListener() {
+        saveEntryButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Taken from http://stackoverflow.com/questions/7129448/how-can-i-get-the-value-of-an-android-edittext-component-as-an-integer on Jan 30, 2016
                 String date = tDate.getText().toString();
@@ -59,9 +65,14 @@ public class newEntryActivity extends MainActivity {
                 Double fuelUnitCost = Double.parseDouble(tFuelUnitCost.getText().toString());
                 Double fuelCost = fuelAmount * fuelUnitCost * 0.01;
 
-                entryLog entry = new entryLog(date, station, odometer, fuelGrade, fuelAmount,
-                        fuelUnitCost, fuelCost);
-                entryLogs.addEntry(entry);
+                entryLog.setDate(date);
+                entryLog.setStation(station);
+                entryLog.setOdometer(odometer);
+                entryLog.setFuelGrade(fuelGrade);
+                entryLog.setFuelAmount(fuelAmount);
+                entryLog.setFuelUnitCost(fuelUnitCost);
+                entryLog.setFuelCost(fuelCost);
+
 
                 saveInFile();
                 finish();
@@ -73,7 +84,31 @@ public class newEntryActivity extends MainActivity {
                 finish();
             }
         });
+    }
 
+    protected void onStart() {
+        super.onStart();
+        loadFromFile();
+
+        if (entryLogs.getCount() > 0) {
+            entryLog = entryLogs.getEntry(entryIndex);
+            displayLogInfo();
+        }
+    }
+
+    private void displayLogInfo(){
+        // Decimal Formats
+        // Taken from http://javarevisited.blogspot.ca/2012/03/how-to-format-decimal-number-in-java.html, Jan 31, 2016
+        DecimalFormat df1 = new DecimalFormat("#0.0");
+        DecimalFormat df3 = new DecimalFormat("#0.000");
+
+        tDate.setText(entryLog.getDate(),TextView.BufferType.EDITABLE);
+        tStation.setText(entryLog.getStation(),TextView.BufferType.EDITABLE);
+        tOdometer.setText(df1.format(entryLog.getFuelCost()),TextView.BufferType.EDITABLE);
+        tFuelGrade.setText(entryLog.getFuelGrade(),TextView.BufferType.EDITABLE);
+        tFuelAmount.setText(df3.format(entryLog.getFuelAmount()),TextView.BufferType.EDITABLE);
+        tFuelUnitCost.setText(df1.format(entryLog.getFuelUnitCost()), TextView.BufferType.EDITABLE);
+        FuelCost.setText(DecimalFormat.getCurrencyInstance().format(entryLog.getFuelCost()), TextView.BufferType.EDITABLE);
     }
 
 }

@@ -1,5 +1,6 @@
 package bruce_hoang.bhoang2_fueltrack;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,12 +9,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 
 public class MainActivity extends AppCompatActivity {
 
     protected static final String FILENAME = "file.sav";
     protected entryLogList entryLogs = new entryLogList();
-
+    protected int entryIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button viewLogsButton = (Button) findViewById(R.id.view_entries);
         Button newEntryButton = (Button) findViewById(R.id.new_entry);
+        Button clearLogsButton = (Button) findViewById(R.id.clear_entries);
 
         newEntryButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
@@ -32,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
         viewLogsButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
                 buttonViewLogs(v);
+            }
+        });
+
+        clearLogsButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+                clearFile();
             }
         });
     }
@@ -57,6 +72,49 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    private void clearFile() {
+        // Just deletes the file.
+        try {
+            FileOutputStream fos = openFileOutput(FILENAME, 0);
+            // took from http://stackoverflow.com/questions/3554722/how-to-delete-internal-storage-file-in-android, Jan 31, 2016
+            deleteFile(FILENAME);
+            fos.close();
+
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException();
+        } catch (IOException e){
+            throw new RuntimeException();
+        }
+    }
+
+    protected void loadFromFile() {
+        try {
+            FileInputStream fis = openFileInput(FILENAME);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            entryLogs = (entryLogList) ois.readObject();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Taken from https://github.com/SRomansky/lonelyTwitter/blob/w16Thursday/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java, Jan 31, 2016
+    protected void saveInFile() {
+        try {
+            FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_APPEND);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(entryLogs);
+            fos.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException();
+        } catch (IOException e) {
+            throw new RuntimeException();
+        }
+    }
+
+
 
     public void buttonAddNewEntry(View view){
         // Starts New Entry Activity

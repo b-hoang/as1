@@ -4,26 +4,21 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/viewLogsActivity"
-    tools:context="bruce_hoang.bhoang2_fueltrack.viewLogsActivity">
+    tools:context="bruce_hoang.bhoang2_fueltrack.editEntryActivity"
+    android:id="@+id/editEntryActivity">
 
-
+    <!-- All the texts/fields -->
     <LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/linearLayout"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentEnd="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentTop="true"
-    android:layout_above="@+id/linearLayout2">
-
-    <!--<ListView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:id="@+id/listView" />-->
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/linearLayout2">
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,12 +29,15 @@
             android:id="@+id/text_date"
             android:layout_gravity="center_horizontal" />
 
-        <TextView
-            android:id="@+id/display_date"
+        <EditText
+            android:id="@+id/edit_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="center_horizontal"/>
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="@string/edit_date"
+            android:inputType="date"
+            android:layout_gravity="center_horizontal"
+            android:singleLine="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,12 +48,14 @@
             android:id="@+id/textView_Station"
             android:layout_gravity="center_horizontal" />
 
-        <TextView
-            android:id="@+id/display_station"
+        <EditText
+            android:id="@+id/edit_station"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="center_horizontal"/>
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="@string/edit_station"
+            android:layout_gravity="center_horizontal"
+            android:singleLine="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -66,12 +66,16 @@
             android:id="@+id/textView_Odometer"
             android:layout_gravity="center_horizontal" />
 
-        <TextView
-            android:id="@+id/display_odometer"
+        <EditText
+            android:id="@+id/edit_odometer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="center_horizontal"/>
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="@string/edit_odometer"
+            android:layout_gravity="center_horizontal"
+            android:inputType="numberDecimal"
+            android:digits=".1234567890"
+            android:singleLine="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -82,12 +86,14 @@
             android:id="@+id/textView_fuelGrade"
             android:layout_gravity="center_horizontal" />
 
-        <TextView
-            android:id="@+id/display_fuel_grade"
+        <EditText
+            android:id="@+id/edit_fuel_grade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="center_horizontal"/>
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="@string/edit_fuel_grade"
+            android:layout_gravity="center_horizontal"
+            android:singleLine="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -99,12 +105,16 @@
             android:layout_gravity="center_horizontal"
             />
 
-        <TextView
-            android:id="@+id/display_fuel_amount"
+        <EditText
+            android:id="@+id/edit_fuel_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="center_horizontal"/>
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="@string/edit_fuel_amount"
+            android:layout_gravity="center_horizontal"
+            android:inputType="numberDecimal"
+            android:digits=".1234567890"
+            android:singleLine="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -115,12 +125,16 @@
             android:id="@+id/textView_fuelUnitCost"
             android:layout_gravity="center_horizontal" />
 
-        <TextView
-            android:id="@+id/display_fuel_unit_cost"
+        <EditText
+            android:id="@+id/edit_fuel_unit_cost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="center_horizontal"/>
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="@string/edit_fuel_unit_cost"
+            android:layout_gravity="center_horizontal"
+            android:inputType="numberDecimal"
+            android:digits=".1234567890"
+            android:singleLine="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -131,12 +145,19 @@
             android:id="@+id/textView_fuelCost"
             android:layout_gravity="center_horizontal"/>
 
-        <TextView
-            android:id="@+id/display_fuel_cost"
+        <Button
+            android:id="@+id/calculate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_gravity="center_horizontal"/>
+            android:text="@string/button_calculate"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/fuel_cost"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 
@@ -149,20 +170,21 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
 
-    <Button
-        android:id="@+id/cancel"
-        android:layout_width="0dp"
-        android:layout_weight="0.5"
-        android:layout_height="wrap_content"
-        android:text="@string/button_cancel" />
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="@string/button_cancel" />
 
-    <Button
-        android:id="@+id/edit"
-        android:layout_width="0dp"
-        android:layout_weight="0.5"
-        android:layout_height="wrap_content"
-        android:text="@string/button_edit"
-        android:layout_gravity="center_horizontal" />
+        <Button
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="@string/button_save"
+            android:layout_gravity="center_horizontal" />
+
     </LinearLayout>
 
 </RelativeLayout>

@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".newEntryActivity" />
         <activity android:name=".viewLogsActivity"></activity>
+        <activity android:name=".editEntryActivity"></activity>
     </application>
 
 </manifest>
