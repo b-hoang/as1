@@ -194,6 +194,22 @@
 
         <TextView
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:text="@string/text_totalFuelCost"
+            android:id="@+id/textView_totalFuelCost"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/display_total_fuel_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/log_number"
             android:textAppearance="?android:attr/textAppearanceSmall"

@@ -65,7 +65,7 @@ public class newEntryActivity extends MainActivity {
 
                 entryLog entry = new entryLog(date, station, odometer, fuelGrade, fuelAmount,
                         fuelUnitCost, fuelCost);
-                entryLogs.addEntry(entry);
+                entryLogs.add(entry);
 
                 saveInFile();
                 finish();

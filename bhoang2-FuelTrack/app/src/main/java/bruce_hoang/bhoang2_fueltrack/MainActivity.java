@@ -15,13 +15,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
 
     protected static final String FILENAME = "entrylogs.txt";
-    protected entryLogList entryLogs = new entryLogList();
-    protected int entryIndex = 0;
+    protected ArrayList<entryLog> entryLogs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         clearLogsButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v){
+            public void onClick(View v) {
                 clearFile();
             }
         });
@@ -95,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             FileInputStream fis = openFileInput(FILENAME);
             ObjectInputStream ois = new ObjectInputStream(fis);
-            entryLogs = (entryLogList) ois.readObject();
+            entryLogs = (ArrayList<entryLog>) ois.readObject();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
     // java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java, Jan 31, 2016
     protected void saveInFile() {
         try {
-            FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_APPEND);
+            FileOutputStream fos = openFileOutput(FILENAME, 0);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(entryLogs);
             fos.close();

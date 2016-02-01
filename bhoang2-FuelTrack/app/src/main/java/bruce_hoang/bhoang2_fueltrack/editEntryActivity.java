@@ -1,5 +1,6 @@
 package bruce_hoang.bhoang2_fueltrack;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +39,11 @@ public class editEntryActivity extends viewLogsActivity {
         tFuelUnitCost = (EditText) findViewById(R.id.edit_fuel_unit_cost);
         FuelCost = (TextView) findViewById(R.id.fuel_cost);
 
+//        Gets previous entryIndex to display proper entryLog.
+        Bundle extras = getIntent().getExtras();
+        entryIndex = (int) extras.get("entryIndex");
+
+
         Button cancelButton = (Button) findViewById(R.id.cancel);
         Button saveEntryButton = (Button) findViewById(R.id.save);
         Button calculateButton = (Button) findViewById(R.id.calculate);
@@ -75,7 +81,7 @@ public class editEntryActivity extends viewLogsActivity {
                 entryLog.setFuelUnitCost(fuelUnitCost);
                 entryLog.setFuelCost(fuelCost);
 
-                entryLogs.setEntry(entryIndex, entryLog);
+                entryLogs.set(entryIndex, entryLog);
                 saveInFile();
                 finish();
             }
@@ -90,10 +96,9 @@ public class editEntryActivity extends viewLogsActivity {
 
     protected void onStart() {
         super.onStart();
-        loadFromFile();
 
-        if (entryLogs.getCount() > 0) {
-            entryLog = entryLogs.getEntry(entryIndex);
+        if (entryLogs.size() > 0) {
+            entryLog = entryLogs.get(entryIndex);
             displayLogInfo();
         }
     }
@@ -104,6 +109,8 @@ public class editEntryActivity extends viewLogsActivity {
         // number-in-java.html, Jan 31, 2016
         DecimalFormat df1 = new DecimalFormat("#0.0");
         DecimalFormat df3 = new DecimalFormat("#0.000");
+
+        entryLog = entryLogs.get(entryIndex);
 
         tDate.setText(entryLog.getDate(),TextView.BufferType.EDITABLE);
         tStation.setText(entryLog.getStation(),TextView.BufferType.EDITABLE);
