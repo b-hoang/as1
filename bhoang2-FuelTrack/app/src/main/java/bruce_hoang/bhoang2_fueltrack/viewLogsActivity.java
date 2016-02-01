@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 public class viewLogsActivity extends MainActivity {
 
@@ -38,8 +39,6 @@ public class viewLogsActivity extends MainActivity {
         FuelCost = (TextView) findViewById(R.id.display_fuel_cost);
         logNumber = (TextView) findViewById(R.id.log_number);
 
-
-
         Button cancelButton = (Button) findViewById(R.id.cancel);
         Button editButton = (Button) findViewById(R.id.edit);
         Button previousButton = (Button) findViewById(R.id.previous);
@@ -66,13 +65,15 @@ public class viewLogsActivity extends MainActivity {
                 if (entryIndex > 0) {
                     entryLog = entryLogs.getEntry(entryIndex - 1);
                     displayLogInfo();
+                    startActivity(getIntent());
+                    displayLogInfo();
                 }
             }
         });
 //        Next button
         nextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (entryIndex < (entryLogs.getCount())) {
+                if (entryIndex+1 < (entryLogs.getCount())) {
                     entryLog = entryLogs.getEntry(entryIndex + 1);
                     displayLogInfo();
                     startActivity(getIntent());
@@ -83,7 +84,8 @@ public class viewLogsActivity extends MainActivity {
     }
 
 
-//    Taken from https://github.com/SRomansky/lonelyTwitter/blob/f15monday/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java, Jan 31, 2016
+//    Taken from https://github.com/SRomansky/lonelyTwitter/blob/f15monday/app/src/main/java/ca/
+// ualberta/cs/lonelytwitter/LonelyTwitterActivity.java, Jan 31, 2016
     @Override
     protected void onStart() {
     // TODO Auto-generated method stub
@@ -98,7 +100,8 @@ public class viewLogsActivity extends MainActivity {
 
     private void displayLogInfo(){
         // Decimal Formats
-        // Taken from Javin Paul, http://javarevisited.blogspot.ca/2012/03/how-to-format-decimal-number-in-java.html, Jan 31, 2016
+        // Taken from Javin Paul, http://javarevisited.blogspot.ca/2012/03/how-to-format-decimal-
+        // number-in-java.html, Jan 31, 2016
         DecimalFormat df1 = new DecimalFormat("#0.0");
         DecimalFormat df3 = new DecimalFormat("#0.000");
 

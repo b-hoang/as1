@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by Bruce-PC on 1/27/2016.
  */
-public class entryLog extends newEntryActivity implements Serializable{
+public class entryLog extends Object implements Serializable{
     private String date;
     private String station;
     private String fuelGrade;

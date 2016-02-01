@@ -44,7 +44,8 @@ public class newEntryActivity extends MainActivity {
                 Double fuelCost = fuelAmount * fuelUnitCost * 0.01;
 
                 FuelCost.setText(DecimalFormat.getCurrencyInstance().format(fuelCost));
-                // Taken from Konstantin Burov, http://stackoverflow.com/questions/4127725/how-can-i-remove-a-button-or-make-it-invisible-in-android, Jan 31, 2016
+                // Taken from Konstantin Burov, http://stackoverflow.com/questions/4127725/how-
+                // can-i-remove-a-button-or-make-it-invisible-in-android, Jan 31, 2016
                 // Used to hide the calculate button so you can see the fuel amount.
                 v.setVisibility(View.GONE);
             }
@@ -52,7 +53,8 @@ public class newEntryActivity extends MainActivity {
 
         addEntryButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Taken from Matt Ball, http://stackoverflow.com/questions/7129448/how-can-i-get-the-value-of-an-android-edittext-component-as-an-integer on Jan 30, 2016
+                // Taken from Matt Ball, http://stackoverflow.com/questions/7129448/how-can-
+                // i-get-the-value-of-an-android-edittext-component-as-an-integer on Jan 30, 2016
                 String date = tDate.getText().toString();
                 String station = tStation.getText().toString();
                 Double odometer = Double.parseDouble(tOdometer.getText().toString());

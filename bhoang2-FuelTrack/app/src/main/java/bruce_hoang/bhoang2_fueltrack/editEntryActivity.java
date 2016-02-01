@@ -57,7 +57,8 @@ public class editEntryActivity extends viewLogsActivity {
         saveEntryButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Sets the TextView with its corresponding numbers/strings
-                // Taken from Matt Ball, http://stackoverflow.com/questions/7129448/how-can-i-get-the-value-of-an-android-edittext-component-as-an-integer on Jan 30, 2016
+                // Taken from Matt Ball, http://stackoverflow.com/questions/7129448/how-can-i-get-
+                // the-value-of-an-android-edittext-component-as-an-integer on Jan 30, 2016
                 String date = tDate.getText().toString();
                 String station = tStation.getText().toString();
                 Double odometer = Double.parseDouble(tOdometer.getText().toString());
@@ -99,7 +100,8 @@ public class editEntryActivity extends viewLogsActivity {
 
     private void displayLogInfo(){
         // Decimal Formats
-        // Taken from Javin Paul, http://javarevisited.blogspot.ca/2012/03/how-to-format-decimal-number-in-java.html, Jan 31, 2016
+        // Taken from Javin Paul, http://javarevisited.blogspot.ca/2012/03/how-to-format-decimal-
+        // number-in-java.html, Jan 31, 2016
         DecimalFormat df1 = new DecimalFormat("#0.0");
         DecimalFormat df3 = new DecimalFormat("#0.000");
 

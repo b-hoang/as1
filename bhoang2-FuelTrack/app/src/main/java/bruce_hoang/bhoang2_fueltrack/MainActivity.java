@@ -78,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
         // Just deletes the file.
         try {
             FileOutputStream fos = openFileOutput(FILENAME, 0);
-            // took from Barry, http://stackoverflow.com/questions/3554722/how-to-delete-internal-storage-file-in-android, Jan 31, 2016
+            // took from Barry, http://stackoverflow.com/questions/3554722/how-to-delete-
+            // internal-storage-file-in-android, Jan 31, 2016
             deleteFile(FILENAME);
             fos.close();
 
@@ -102,7 +103,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Taken from https://github.com/SRomansky/lonelyTwitter/blob/w16Thursday/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java, Jan 31, 2016
+    // Taken from https://github.com/SRomansky/lonelyTwitter/blob/w16Thursday/app/src/main/
+    // java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java, Jan 31, 2016
     protected void saveInFile() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_APPEND);
