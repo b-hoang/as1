@@ -1,0 +1,360 @@
+ACTIVITY MANAGER PENDING INTENTS (dumpsys activity intents)
+  * PendingIntentRecord{b1ba4c88 android broadcastIntent}
+  * PendingIntentRecord{b205b0f8 android startActivity}
+  * PendingIntentRecord{b1c1f538 android broadcastIntent}
+  * PendingIntentRecord{b2087f60 com.android.providers.calendar broadcastIntent}
+  * PendingIntentRecord{b1cba3a8 com.android.settings broadcastIntent}
+  * PendingIntentRecord{b204b8d8 com.android.deskclock startActivity}
+  * PendingIntentRecord{b1ba4e88 android broadcastIntent}
+  * PendingIntentRecord{b2006808 com.android.phone broadcastIntent}
+  * PendingIntentRecord{b1ba0610 android broadcastIntent}
+  * PendingIntentRecord{b20749d0 android broadcastIntent}
+  * PendingIntentRecord{b206dda8 android startActivity}
+  * PendingIntentRecord{b1bad610 android broadcastIntent}
+  * PendingIntentRecord{b1bf7870 android broadcastIntent}
+  * PendingIntentRecord{b1ba0010 android broadcastIntent}
+  * PendingIntentRecord{b1bb0e10 com.android.phone broadcastIntent}
+  * PendingIntentRecord{b1bbe768 android broadcastIntent}
+  * PendingIntentRecord{b2034120 com.android.deskclock broadcastIntent}
+  * PendingIntentRecord{b200a240 com.android.settings broadcastIntent}
+  * PendingIntentRecord{b1fe2fd0 com.android.calendar broadcastIntent}
+  * PendingIntentRecord{b22607f0 com.android.providers.calendar broadcastIntent}
+  * PendingIntentRecord{b1c1f6f0 android broadcastIntent}
+  * PendingIntentRecord{b200fc20 com.android.settings broadcastIntent}
+  * PendingIntentRecord{b1b81b88 android broadcastIntent}
+  * PendingIntentRecord{b1df98f0 com.android.settings broadcastIntent}
+  * PendingIntentRecord{b1ffead0 com.android.music broadcastIntent}
+  * PendingIntentRecord{b20747b8 android broadcastIntent}
+  * PendingIntentRecord{b1bf21a8 android broadcastIntent}
+  * PendingIntentRecord{b1fc9ed0 com.android.settings broadcastIntent}
+ 
+ACTIVITY MANAGER BROADCAST STATE (dumpsys activity broadcasts)
+  Historical broadcasts [foreground]:
+  #0: BroadcastRecord{b209adf8 u-1 android.intent.action.CONFIGURATION_CHANGED}
+    act=android.intent.action.CONFIGURATION_CHANGED flg=0x70000010
+  #1: BroadcastRecord{b2051ad8 u-1 android.intent.action.CONFIGURATION_CHANGED}
+    act=android.intent.action.CONFIGURATION_CHANGED flg=0x70000010
+  #2: BroadcastRecord{b2063250 u-1 android.intent.action.CONFIGURATION_CHANGED}
+    act=android.intent.action.CONFIGURATION_CHANGED flg=0x70000010
+  #3: BroadcastRecord{b206fa60 u-1 android.intent.action.USER_SWITCHED}
+    act=android.intent.action.USER_SWITCHED flg=0x50000010 (has extras)
+    extras: Bundle[{android.intent.extra.user_handle=0}]
+  #4: BroadcastRecord{b2079490 u0 android.intent.action.USER_STARTED}
+    act=android.intent.action.USER_STARTED flg=0x50000010 (has extras)
+    extras: Bundle[{android.intent.extra.user_handle=0}]
+  #5: BroadcastRecord{b1df9928 u-1 android.intent.action.CLOSE_SYSTEM_DIALOGS}
+    act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x50000010 (has extras)
+    extras: Bundle[{reason=lock}]
+  #6: BroadcastRecord{b1bfddc0 u-1 android.intent.action.CONFIGURATION_CHANGED}
+    act=android.intent.action.CONFIGURATION_CHANGED flg=0x70000010
+
+  Historical broadcasts [background]:
+  #0: BroadcastRecord{b20d6e70 u0 android.intent.action.USER_PRESENT}
+    act=android.intent.action.USER_PRESENT flg=0x28000010
+  #1: BroadcastRecord{b2115b60 u0 com.android.phone.UPDATE_CALLER_INFO_CACHE}
+    act=com.android.phone.UPDATE_CALLER_INFO_CACHE flg=0x10
+    targetComp: {com.android.phone/com.android.phone.CallerInfoCacheUpdateReceiver}
+  #2: BroadcastRecord{b206f100 u0 com.android.providers.calendar.intent.CalendarProvider2}
+    act=com.android.providers.calendar.intent.CalendarProvider2 flg=0x10 (has extras)
+    extras: Bundle[mParcelledData.dataSize=48]
+  #3: BroadcastRecord{b2258d50 u0 com.android.server.NetworkTimeUpdateService.action.POLL}
+    act=com.android.server.NetworkTimeUpdateService.action.POLL flg=0x10
+  #4: BroadcastRecord{b20c0070 u-1 android.intent.action.TIME_TICK}
+    act=android.intent.action.TIME_TICK flg=0x40000010
+  #5: BroadcastRecord{b20bfea8 u0 android.content.syncmanager.SYNC_ALARM}
+    act=android.content.syncmanager.SYNC_ALARM flg=0x10
+  #6: BroadcastRecord{b208c6b8 u0 com.android.internal.telephony.data-stall}
+    act=com.android.internal.telephony.data-stall flg=0x10 (has extras)
+    extras: Bundle[mParcelledData.dataSize=64]
+  #7: BroadcastRecord{b200de38 u-1 android.net.conn.CONNECTIVITY_CHANGE}
+    act=android.net.conn.CONNECTIVITY_CHANGE flg=0x8000010 (has extras)
+    extras: Bundle[{extraInfo=epc.tmobile.com, networkType=0, reason=connected, networkInfo=NetworkInfo: type: mobile[UMTS], state: CONNECTED/CONNECTED, reason: connected, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false, inetCondition=0}]
+  #8: BroadcastRecord{b1fedc40 u-1 android.net.conn.CONNECTIVITY_CHANGE}
+    act=android.net.conn.CONNECTIVITY_CHANGE flg=0x8000010 (has extras)
+    extras: Bundle[{extraInfo=epc.tmobile.com, networkType=5, reason=dataDisabled, networkInfo=NetworkInfo: type: mobile_hipri[UMTS], state: DISCONNECTED/DISCONNECTED, reason: dataDisabled, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false, inetCondition=0}]
+  #9: BroadcastRecord{b200dd68 u-1 android.net.conn.CONNECTIVITY_CHANGE}
+    act=android.net.conn.CONNECTIVITY_CHANGE flg=0x8000010 (has extras)
+    extras: Bundle[{extraInfo=epc.tmobile.com, networkType=0, reason=connected, networkInfo=NetworkInfo: type: mobile[UMTS], state: CONNECTED/CONNECTED, reason: connected, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false, inetCondition=0}]
+  #10: BroadcastRecord{b1fedb70 u-1 android.net.conn.CONNECTIVITY_CHANGE}
+    act=android.net.conn.CONNECTIVITY_CHANGE flg=0x8000010 (has extras)
+    extras: Bundle[{extraInfo=epc.tmobile.com, networkType=5, reason=dataDisabled, networkInfo=NetworkInfo: type: mobile_hipri[UMTS], state: DISCONNECTED/DISCONNECTED, reason: dataDisabled, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false, inetCondition=0}]
+  #11: BroadcastRecord{b1fe2bb0 u-1 android.net.conn.CONNECTIVITY_CHANGE_IMMEDIATE}
+    act=android.net.conn.CONNECTIVITY_CHANGE_IMMEDIATE flg=0x8000010 (has extras)
+    extras: Bundle[{extraInfo=epc.tmobile.com, networkType=0, reason=connected, networkInfo=NetworkInfo: type: mobile[UMTS], state: CONNECTED/CONNECTED, reason: connected, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false, inetCondition=0}]
+  #12: BroadcastRecord{b1ffb7c8 u-1 android.net.conn.CONNECTIVITY_CHANGE_IMMEDIATE}
+    act=android.net.conn.CONNECTIVITY_CHANGE_IMMEDIATE flg=0x8000010 (has extras)
+    extras: Bundle[{extraInfo=epc.tmobile.com, networkType=5, networkInfo=NetworkInfo: type: mobile_hipri[UMTS], state: DISCONNECTED/DISCONNECTED, reason: dataDisabled, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false, reason=dataDisabled, inetCondition=0}]
+  #13: BroadcastRecord{b202dd80 u-1 android.intent.action.ANY_DATA_STATE}
+    act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=hipri, state=DISCONNECTED, apn=epc.tmobile.com, reason=dataDisabled}]
+  #14: BroadcastRecord{b20d4f90 u-1 android.net.conn.CONNECTIVITY_CHANGE}
+    act=android.net.conn.CONNECTIVITY_CHANGE flg=0x8000010 (has extras)
+    extras: Bundle[{extraInfo=epc.tmobile.com, networkType=5, reason=dataEnabled, networkInfo=NetworkInfo: type: mobile_hipri[UMTS], state: CONNECTED/CONNECTED, reason: dataEnabled, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false, inetCondition=0}]
+  #15: BroadcastRecord{b211a5e0 u-1 android.net.conn.CONNECTIVITY_CHANGE}
+    act=android.net.conn.CONNECTIVITY_CHANGE flg=0x8000010 (has extras)
+    extras: Bundle[{extraInfo=epc.tmobile.com, networkType=5, reason=dataEnabled, networkInfo=NetworkInfo: type: mobile_hipri[UMTS], state: CONNECTED/CONNECTED, reason: dataEnabled, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false, inetCondition=0}]
+  #16: BroadcastRecord{b2006378 u-1 android.net.conn.CONNECTIVITY_CHANGE}
+    act=android.net.conn.CONNECTIVITY_CHANGE flg=0x8000010 (has extras)
+    extras: Bundle[{extraInfo=epc.tmobile.com, networkType=0, reason=connected, networkInfo=NetworkInfo: type: mobile[UMTS], state: CONNECTED/CONNECTED, reason: connected, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false, inetCondition=0}]
+  #17: BroadcastRecord{b2011398 u-1 android.net.conn.CONNECTIVITY_CHANGE}
+    act=android.net.conn.CONNECTIVITY_CHANGE flg=0x8000010 (has extras)
+    extras: Bundle[{extraInfo=epc.tmobile.com, networkType=0, reason=connected, networkInfo=NetworkInfo: type: mobile[UMTS], state: CONNECTED/CONNECTED, reason: connected, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false, inetCondition=0}]
+  #18: BroadcastRecord{b205adf8 u0 com.android.calendar.APPWIDGET_UPDATE}
+    act=com.android.calendar.APPWIDGET_UPDATE flg=0x10
+  #19: BroadcastRecord{b20a2708 u0 android.intent.action.PROVIDER_CHANGED}
+    act=android.intent.action.PROVIDER_CHANGED dat=content://com.android.calendar flg=0x10
+  #20: BroadcastRecord{b2028e88 u0 com.android.mms.transaction.SEND_INACTIVE_MESSAGE}
+    act=com.android.mms.transaction.SEND_INACTIVE_MESSAGE flg=0x10
+    targetComp: {com.android.mms/com.android.mms.transaction.SmsReceiver}
+  #21: BroadcastRecord{b1df7cc0 u0 android.appwidget.action.APPWIDGET_UPDATE}
+    act=android.appwidget.action.APPWIDGET_UPDATE flg=0x10 (has extras)
+    targetComp: {com.android.settings/com.android.settings.widget.SettingsAppWidgetProvider}
+    extras: Bundle[{appWidgetIds=[I@b20b3dc8}]
+  #22: BroadcastRecord{b20b3cf8 u0 android.appwidget.action.APPWIDGET_ENABLED}
+    act=android.appwidget.action.APPWIDGET_ENABLED flg=0x10
+    targetComp: {com.android.settings/com.android.settings.widget.SettingsAppWidgetProvider}
+  #23: BroadcastRecord{b20b3b20 u0 android.appwidget.action.APPWIDGET_UPDATE}
+    act=android.appwidget.action.APPWIDGET_UPDATE flg=0x10 (has extras)
+    targetComp: {com.android.deskclock/com.android.alarmclock.AnalogAppWidgetProvider}
+    extras: Bundle[{appWidgetIds=[I@b1fc9b78}]
+  #24: BroadcastRecord{b1fc9aa8 u0 android.appwidget.action.APPWIDGET_ENABLED}
+    act=android.appwidget.action.APPWIDGET_ENABLED flg=0x10
+    targetComp: {com.android.deskclock/com.android.alarmclock.AnalogAppWidgetProvider}
+  #25: act=android.intent.action.BOOT_COMPLETED flg=0x10 (has extras)
+    extras: Bundle[{android.intent.extra.user_handle=0}]
+  #26: act=android.intent.action.ALARM_CHANGED flg=0x10 (has extras)
+    extras: Bundle[mParcelledData.dataSize=40]
+  #27: act=android.intent.action.ALARM_CHANGED flg=0x10 (has extras)
+    extras: Bundle[mParcelledData.dataSize=40]
+  #28: act=android.intent.action.BOOT_COMPLETED flg=0x10 (has extras)
+    extras: Bundle[{android.intent.extra.user_handle=0}]
+  #29: act=android.net.conn.CONNECTIVITY_CHANGE_IMMEDIATE flg=0x8000010 (has extras)
+    extras: Bundle[{extraInfo=epc.tmobile.com, networkType=5, reason=dataEnabled, networkInfo=NetworkInfo: type: mobile_hipri[UMTS], state: CONNECTED/CONNECTED, reason: dataEnabled, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false, inetCondition=0}]
+  #30: act=android.appwidget.action.APPWIDGET_UPDATE flg=0x10 (has extras)
+    extras: Bundle[{appWidgetIds=[I@b1fc3a30}]
+  #31: act=android.appwidget.action.APPWIDGET_UPDATE flg=0x10 (has extras)
+    extras: Bundle[{appWidgetIds=[I@b2009c68}]
+  #32: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{iface=eth0, linkCapabilities={}, reason=dataEnabled, apnType=hipri, state=CONNECTED, linkProperties={InterfaceName: eth0 LinkAddresses: [10.0.2.15/32,]  Routes: [0.0.0.0/0 -> 10.0.2.2,] DnsAddresses: [10.0.2.3,10.0.2.4,] Domains: null}, apn=epc.tmobile.com}]
+  #33: act=android.net.conn.CONNECTIVITY_CHANGE_IMMEDIATE flg=0x8000010 (has extras)
+    extras: Bundle[{extraInfo=epc.tmobile.com, networkType=0, reason=connected, networkInfo=NetworkInfo: type: mobile[UMTS], state: CONNECTED/CONNECTED, reason: connected, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false, inetCondition=0}]
+  #34: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=cbs, state=DISCONNECTED, apn=null, reason=dataEnabled}]
+  #35: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=mms, state=DISCONNECTED, apn=null, reason=dataEnabled}]
+  #36: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=ims, state=DISCONNECTED, apn=null, reason=dataEnabled}]
+  #37: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=supl, state=DISCONNECTED, apn=null, reason=dataEnabled}]
+  #38: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=fota, state=DISCONNECTED, apn=null, reason=dataEnabled}]
+  #39: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=hipri, state=CONNECTING, apn=epc.tmobile.com, reason=dataEnabled}]
+  #40: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{iface=eth0, linkCapabilities={}, reason=connected, apnType=default, state=CONNECTED, linkProperties={InterfaceName: eth0 LinkAddresses: [10.0.2.15/32,]  Routes: [0.0.0.0/0 -> 10.0.2.2,] DnsAddresses: [10.0.2.3,10.0.2.4,] Domains: null}, apn=epc.tmobile.com}]
+  #41: act=android.intent.action.SIM_STATE_CHANGED flg=0x20000010 (has extras)
+    extras: Bundle[mParcelledData.dataSize=120]
+  #42: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=cbs, state=DISCONNECTED, apn=null, reason=simLoaded}]
+  #43: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=mms, state=DISCONNECTED, apn=null, reason=simLoaded}]
+  #44: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=ims, state=DISCONNECTED, apn=null, reason=simLoaded}]
+  #45: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=hipri, state=DISCONNECTED, apn=null, reason=simLoaded}]
+  #46: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=supl, state=DISCONNECTED, apn=null, reason=simLoaded}]
+  #47: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=fota, state=DISCONNECTED, apn=null, reason=simLoaded}]
+  #48: act=android.intent.action.ANY_DATA_STATE flg=0x10 (has extras)
+    extras: Bundle[{apnType=default, state=CONNECTING, apn=epc.tmobile.com, reason=simLoaded}]
+  #49: act=android.appwidget.action.APPWIDGET_UPDATE flg=0x10 (has extras)
+    extras: Bundle[{appWidgetIds=[I@b2016d10}]
+  ...
+
+  Sticky broadcasts for user -1:
+  * Sticky action android.media.SCO_AUDIO_STATE_CHANGED
+  * Sticky action android.media.ACTION_SCO_AUDIO_STATE_UPDATED
+  * Sticky action android.media.MASTER_MUTE_CHANGED_ACTION
+  * Sticky action android.provider.Telephony.SPN_STRINGS_UPDATED
+  * Sticky action android.net.conn.CONNECTIVITY_CHANGE_IMMEDIATE
+  * Sticky action android.net.nsd.STATE_CHANGED
+  * Sticky action android.net.conn.CONNECTIVITY_CHANGE
+  * Sticky action android.intent.action.BATTERY_CHANGED
+  * Sticky action wifi_scan_available
+  * Sticky action android.intent.action.SIM_STATE_CHANGED
+  * Sticky action android.intent.action.SIG_STR
+  * Sticky action android.intent.action.SERVICE_STATE
+  * Sticky action android.media.RINGER_MODE_CHANGED
+  * Sticky action android.os.UpdateLock.UPDATE_LOCK_CHANGED
+  * Sticky action android.intent.action.HDMI_PLUGGED
+  * Sticky action android.intent.action.ANY_DATA_STATE
+
+  Sticky broadcasts for user 0:
+  * Sticky action com.android.music.metachanged
+  * Sticky action com.android.music.queuechanged
+ 
+ACTIVITY MANAGER CONTENT PROVIDERS (dumpsys activity providers)
+  Published single-user content providers (by class):
+  * ContentProviderRecord{b1bf7d50 u0 com.android.phone/.IccProvider}
+    proc=ProcessRecord{b2054f28 1383:com.android.phone/1001}
+    singleton=true
+    authority=icc
+  * ContentProviderRecord{b1b7bf78 u0 com.android.providers.settings/.SettingsProvider}
+    proc=ProcessRecord{b1aeb188 1209:system/1000}
+    singleton=true
+    authority=settings
+    6 connections, 0 external handles
+      -> 1265:com.android.systemui/u0a10034 s1/1 u0/0 +1m7s812ms
+      -> 1294:android.process.media/u0a10000 s1/1 u0/0 +1m7s42ms
+      -> 1351:com.android.inputmethod.latin/u0a10024 s1/1 u0/0 +1m6s442ms
+      -> 1383:com.android.phone/1001 s1/1 u0/0 +1m6s275ms
+      -> 1366:com.android.settings/1000 s1/1 u0/0 +1m5s626ms
+      -> 1489:com.android.deskclock/u0a10038 s1/1 u0/0 +1m2s584ms
+
+
+  Published user 0 content providers (by class):
+  * ContentProviderRecord{b1cd44e0 u0 com.android.providers.contacts/.VoicemailContentProvider}
+    proc=ProcessRecord{b1c06fe8 1310:android.process.acore/u0a10007}
+    authority=com.android.voicemail
+  * ContentProviderRecord{b2088d88 u0 com.android.mms/.TempFileProvider}
+    proc=ProcessRecord{b20c0330 1619:com.android.mms/u0a10036}
+    authority=mms_temp_file
+  * ContentProviderRecord{b1bb71b8 u0 com.android.providers.drm/.DrmProvider}
+    proc=ProcessRecord{b1c80320 1294:android.process.media/u0a10000}
+    authority=drm
+  * ContentProviderRecord{b1d23ea0 u0 com.android.calendar/.CalendarRecentSuggestionsProvider}
+    proc=ProcessRecord{b1fc6a38 1596:com.android.calendar/u0a10032}
+    authority=com.android.calendar.CalendarRecentSuggestionsProvider
+  * ContentProviderRecord{b1dc5788 u0 com.android.providers.calendar/.CalendarProvider2}
+    proc=ProcessRecord{b1d38450 1559:com.android.providers.calendar/u0a10022}
+    authority=com.android.calendar
+  * ContentProviderRecord{b1dd25b8 u0 com.android.email/.provider.EmailProvider}
+    proc=ProcessRecord{b1dd16b0 1535:com.android.email/u0a10015}
+    authority=com.android.email.provider;com.android.email.notifier
+  * ContentProviderRecord{b2088e60 u0 com.android.mms/.SuggestionsProvider}
+    proc=ProcessRecord{b20c0330 1619:com.android.mms/u0a10036}
+    authority=com.android.mms.SuggestionsProvider
+  * ContentProviderRecord{b1dd0e30 u0 com.android.exchange/.provider.ExchangeDirectoryProvider}
+    proc=ProcessRecord{b1e006e8 1521:com.android.exchange/u0a10004}
+    authority=com.android.exchange.directory.provider
+  * ContentProviderRecord{b1ffd768 u0 com.android.deskclock/.AlarmProvider}
+    proc=ProcessRecord{b2066498 1489:com.android.deskclock/u0a10038}
+    authority=com.android.deskclock
+  * ContentProviderRecord{b2054b80 u0 com.android.launcher/com.android.launcher2.LauncherProvider}
+    proc=ProcessRecord{b207ee68 1396:com.android.launcher/u0a10026}
+    authority=com.android.launcher2.settings
+  * ContentProviderRecord{b206f710 u0 com.android.inputmethod.latin/com.android.inputmethod.dictionarypack.DictionaryProvider}
+    proc=ProcessRecord{b206e950 1351:com.android.inputmethod.latin/u0a10024}
+    authority=com.android.inputmethod.dictionarypack.aosp
+  * ContentProviderRecord{b1cd45e8 u0 com.android.providers.applications/.ApplicationsProvider}
+    proc=ProcessRecord{b1c06fe8 1310:android.process.acore/u0a10007}
+    authority=applications
+  * ContentProviderRecord{b1cd46c0 u0 com.android.providers.contacts/.debug.DumpFileProvider}
+    proc=ProcessRecord{b1c06fe8 1310:android.process.acore/u0a10007}
+    authority=com.android.contacts.dumpfile
+  * ContentProviderRecord{b1cd3730 u0 com.android.providers.contacts/.ContactsProvider2}
+    proc=ProcessRecord{b1c06fe8 1310:android.process.acore/u0a10007}
+    launchingApp=ProcessRecord{b1c06fe8 1310:android.process.acore/u0a10007}
+    authority=contacts;com.android.contacts
+  * ContentProviderRecord{b1c07e30 u0 com.android.providers.media/.MediaProvider}
+    proc=ProcessRecord{b1c80320 1294:android.process.media/u0a10000}
+    authority=media
+  * ContentProviderRecord{b1bc02d0 u0 com.android.providers.telephony/.MmsSmsProvider}
+    proc=ProcessRecord{b2054f28 1383:com.android.phone/1001}
+    authority=mms-sms
+  * ContentProviderRecord{b1c19090 u0 com.android.providers.telephony/.MmsProvider}
+    proc=ProcessRecord{b2054f28 1383:com.android.phone/1001}
+    authority=mms
+  * ContentProviderRecord{b1fbfbb0 u0 com.android.email/.provider.AttachmentProvider}
+    proc=ProcessRecord{b1dd16b0 1535:com.android.email/u0a10015}
+    authority=com.android.email.attachmentprovider
+  * ContentProviderRecord{b1c05c70 u0 com.android.providers.telephony/.SmsProvider}
+    proc=ProcessRecord{b2054f28 1383:com.android.phone/1001}
+    authority=sms
+  * ContentProviderRecord{b1cd47b0 u0 com.android.providers.contacts/.CallLogProvider}
+    proc=ProcessRecord{b1c06fe8 1310:android.process.acore/u0a10007}
+    authority=call_log
+  * ContentProviderRecord{b1c017a8 u0 com.android.providers.telephony/.TelephonyProvider}
+    proc=ProcessRecord{b2054f28 1383:com.android.phone/1001}
+    authority=telephony
+  * ContentProviderRecord{b1cd48e8 u0 com.android.providers.userdictionary/.UserDictionaryProvider}
+    proc=ProcessRecord{b1c06fe8 1310:android.process.acore/u0a10007}
+    authority=user_dictionary
+  * ContentProviderRecord{b1bbc578 u0 com.android.providers.downloads/.DownloadProvider}
+    proc=ProcessRecord{b1c80320 1294:android.process.media/u0a10000}
+    authority=downloads
+ 
+ACTIVITY MANAGER SERVICES (dumpsys activity services)
+  User 0 active services:
+  * ServiceRecord{b2004b28 u0 com.android.phone/.TelephonyDebugService}
+    app=ProcessRecord{b2054f28 1383:com.android.phone/1001}
+    created=-1m6s180ms started=true connections=0
+  * ServiceRecord{b20785a0 u0 com.android.location.fused/.FusedLocationService}
+    app=ProcessRecord{b1aeb188 1209:system/1000}
+    created=-1m6s695ms started=false connections=1
+    Connections:
+      act=com.android.location.service.FusedLocationProvider pkg=com.android.location.fused -> 1209:system/1000
+  * ServiceRecord{b206e1c8 u0 com.android.inputmethod.latin/.LatinIME}
+    app=ProcessRecord{b206e950 1351:com.android.inputmethod.latin/u0a10024}
+    created=-1m6s729ms started=false connections=1
+    Connections:
+      act=android.view.InputMethod -> 1209:system/1000
+  * ServiceRecord{b205b5f8 u0 com.android.systemui/.ImageWallpaper}
+    app=ProcessRecord{b1c0ad88 1265:com.android.systemui/u0a10034}
+    created=-1m7s59ms started=false connections=1
+    Connections:
+      act=android.service.wallpaper.WallpaperService -> 1209:system/1000
+  * ServiceRecord{b207b990 u0 android/.hardware.location.GeofenceHardwareService}
+    app=ProcessRecord{b1aeb188 1209:system/1000}
+    created=-1m6s690ms started=false connections=1
+    Connections:
+       -> 1209:system/1000
+  * ServiceRecord{b1c0a640 u0 com.android.systemui/.SystemUIService}
+    app=ProcessRecord{b1c0ad88 1265:com.android.systemui/u0a10034}
+    created=-1m7s959ms started=true connections=0
+ 
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+  Main stack:
+    TaskRecord{b1c7e3e0 #2 A com.android.launcher U 0}
+    Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000000 cmp=com.android.launcher/com.android.launcher2.Launcher }
+      Hist #0: ActivityRecord{b1bbdb98 u0 com.android.launcher/com.android.launcher2.Launcher}
+        Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000000 cmp=com.android.launcher/com.android.launcher2.Launcher }
+        ProcessRecord{b207ee68 1396:com.android.launcher/u0a10026}
+ 
+  Running activities (most recent first):
+    TaskRecord{b1c7e3e0 #2 A com.android.launcher U 0}
+      Run #0: ActivityRecord{b1bbdb98 u0 com.android.launcher/com.android.launcher2.Launcher}
+ 
+  mResumedActivity: ActivityRecord{b1bbdb98 u0 com.android.launcher/com.android.launcher2.Launcher}
+  mFocusedActivity: ActivityRecord{b1bbdb98 u0 com.android.launcher/com.android.launcher2.Launcher}
+
+  Recent tasks:
+  * Recent #0: TaskRecord{b1c7e3e0 #2 A com.android.launcher U 0}
+ 
+ACTIVITY MANAGER RUNNING PROCESSES (dumpsys activity processes)
+  Process LRU list (sorted by oom_adj):
+    PERS # 3: adj=sys  /F  trm= 0 1209:system/1000 (fixed)
+    PERS # 4: adj=pers /F  trm= 0 1383:com.android.phone/1001 (fixed)
+    PERS # 1: adj=pers /F  trm= 0 1265:com.android.systemui/u0a10034 (fixed)
+    Proc # 6: adj=fore /FA trm= 0 1396:com.android.launcher/u0a10026 (top-activity)
+    Proc # 2: adj=prcp /F  trm= 0 1351:com.android.inputmethod.latin/u0a10024 (service)
+        com.android.inputmethod.latin/.LatinIME<=Proc{1209:system/1000}
+    Proc # 5: adj=bak  /B  trm= 0 1559:com.android.providers.calendar/u0a10022 (bg-empty)
+    Proc # 0: adj=bak  /B  trm= 0 1310:android.process.acore/u0a10007 (bg-empty)
+    Proc # 8: adj=bak+2/B  trm= 0 1294:android.process.media/u0a10000 (bg-empty)
+    Proc # 7: adj=bak+2/B  trm= 0 1619:com.android.mms/u0a10036 (bg-empty)
+    Proc #10: adj=bak+4/B  trm= 0 1366:com.android.settings/1000 (bg-empty)
+    Proc # 9: adj=bak+4/B  trm= 0 1596:com.android.calendar/u0a10032 (bg-empty)
+    Proc #14: adj=bak+6/B  trm= 0 1460:com.android.music/u0a10020 (bg-empty)
+    Proc #13: adj=bak+6/B  trm= 0 1521:com.android.exchange/u0a10004 (bg-empty)
+    Proc #12: adj=bak+6/B  trm= 0 1535:com.android.email/u0a10015 (bg-empty)
+    Proc #11: adj=bak+6/B  trm= 0 1489:com.android.deskclock/u0a10038 (bg-empty)
+
+  mStartedUsers:
+    User #0: mState=RUNNING
+  mStartedUserArray: [0]
+  mUserLru: [0]
+  mHomeProcess: ProcessRecord{b207ee68 1396:com.android.launcher/u0a10026}
+  mPreviousProcess: null
+  mConfiguration: {1.0 310mcc260mnc en_US ldltr sw360dp w360dp h567dp 480dpi nrml port finger qwerty/v/v -nav/h s.7}

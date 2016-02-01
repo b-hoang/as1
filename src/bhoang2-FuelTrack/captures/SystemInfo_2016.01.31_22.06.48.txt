@@ -1,0 +1,25 @@
+TASK bruce_hoang.bhoang2_fueltrack id=72
+  ACTIVITY bruce_hoang.bhoang2_fueltrack/.MainActivity b2055278 pid=25709
+    Local FragmentActivity b1a774e8 State:
+      mCreated=truemResumed=true mStopped=false mReallyStopped=false
+      mLoadersStarted=true
+    FragmentManager misc state:
+      mHost=android.support.v4.app.FragmentActivity$HostCallbacks@b1a78368
+      mContainer=android.support.v4.app.FragmentActivity$HostCallbacks@b1a78368
+      mCurState=5 mStateSaved=false mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{b1a7f6e8 V.E..... ... 0,0-1080,1776}
+        android.widget.LinearLayout{b1a83fe0 V.E..... ... 0,0-1080,1776}
+          android.view.ViewStub{b1a86c68 G.E..... ... 0,0-0,0 #1020338}
+          android.widget.FrameLayout{b1a870a0 V.E..... ... 0,75-1080,1776}
+            android.support.v7.widget.FitWindowsLinearLayout{b1a8de40 V.E..... ... 0,0-1080,1701 #7f0c0055 app:id/action_bar_root}
+              android.support.v7.widget.ViewStubCompat{b1a8e570 G.E..... ... 0,0-0,0 #7f0c0056 app:id/action_mode_bar_stub}
+              android.support.v7.widget.ContentFrameLayout{b1a8ed98 V.ED.... ... 0,0-1080,1701 #1020002 android:id/content}
+                android.support.design.widget.CoordinatorLayout{b1a95158 V.E..... ... 0,0-1080,1701}
+                  android.support.design.widget.AppBarLayout{b1a9dd18 V.E..... ... 0,0-1080,168}
+                    android.support.v7.widget.Toolbar{b1aa03d8 V.E..... ... 0,0-1080,168 #7f0c007d app:id/toolbar}
+                  android.widget.LinearLayout{b1aadf38 V.E..... ... 0,168-1080,1701}
+                    android.support.v7.widget.AppCompatTextView{b1ab0118 V.ED.... ... 254,0-825,72 #7f0c008b app:id/text_selectOption}
+                    android.support.v7.widget.AppCompatButton{b1ab29b0 VFED..C. ... 340,72-739,216 #7f0c008c app:id/new_entry}
+                    android.support.v7.widget.AppCompatButton{b1ab4ec8 VFED..C. ... 319,216-760,360 #7f0c008d app:id/view_entries}
+                    android.support.v7.widget.AppCompatButton{b1ab5798 VFED..C. ... 262,360-817,504 #7f0c008e app:id/clear_entries}
