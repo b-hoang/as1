@@ -13,7 +13,7 @@ import java.text.DecimalFormat;
  * This Activity is for editing an entry log. You can change the values to any of the fields
  * and then it saves the log.
  */
-public class editEntryActivity extends MainActivity {
+public class editEntryActivity extends viewLogsActivity {
 
     // Instantiate variables
     private EditText tDate;
@@ -23,7 +23,6 @@ public class editEntryActivity extends MainActivity {
     private EditText tFuelAmount;
     private EditText tFuelUnitCost;
     private TextView FuelCost;
-    private entryLog entryLog = new entryLog();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +50,14 @@ public class editEntryActivity extends MainActivity {
 
                 FuelCost.setText(DecimalFormat.getCurrencyInstance().format(fuelCost));
                 v.setVisibility(View.GONE);
+
             }
         });
 
         saveEntryButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Taken from http://stackoverflow.com/questions/7129448/how-can-i-get-the-value-of-an-android-edittext-component-as-an-integer on Jan 30, 2016
+                // Sets the TextView with its corresponding numbers/strings
+                // Taken from Matt Ball, http://stackoverflow.com/questions/7129448/how-can-i-get-the-value-of-an-android-edittext-component-as-an-integer on Jan 30, 2016
                 String date = tDate.getText().toString();
                 String station = tStation.getText().toString();
                 Double odometer = Double.parseDouble(tOdometer.getText().toString());
@@ -73,7 +74,7 @@ public class editEntryActivity extends MainActivity {
                 entryLog.setFuelUnitCost(fuelUnitCost);
                 entryLog.setFuelCost(fuelCost);
 
-
+                entryLogs.setEntry(entryIndex, entryLog);
                 saveInFile();
                 finish();
             }
@@ -98,7 +99,7 @@ public class editEntryActivity extends MainActivity {
 
     private void displayLogInfo(){
         // Decimal Formats
-        // Taken from http://javarevisited.blogspot.ca/2012/03/how-to-format-decimal-number-in-java.html, Jan 31, 2016
+        // Taken from Javin Paul, http://javarevisited.blogspot.ca/2012/03/how-to-format-decimal-number-in-java.html, Jan 31, 2016
         DecimalFormat df1 = new DecimalFormat("#0.0");
         DecimalFormat df3 = new DecimalFormat("#0.000");
 

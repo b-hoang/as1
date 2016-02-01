@@ -29,4 +29,8 @@ public class entryLogList implements Serializable{
     public int getCount(){
         return entryLogs.size();
     }
+
+    public void setEntry(int index, entryLog entry){
+        entryLogs.set(index, entry);
+    }
 }

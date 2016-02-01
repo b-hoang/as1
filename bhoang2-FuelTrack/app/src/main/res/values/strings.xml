@@ -10,8 +10,8 @@
     <string name="text_fuelAmount">Fuel Amount (x.xxx L):</string>
     <string name="text_fuelUnitCost">Fuel Unit Cost (x.x cents/L):</string>
     <string name="text_fuelCost">Fuel Cost ($x.xx):</string>
-
-    <string name="text_selectOption">Please select an option:</string>
+    <string name="tap_to_edit_title">Select a log to edit it:</string>
+    <string name="text_selectOption">Please selection an option:</string>
 
     <!-- Edit Strings -->
     <string name="edit_date">Enter a date</string>
@@ -28,6 +28,8 @@
     <string name="button_cancel">Cancel</string>
     <string name="button_calculate">Calculate</string>
     <string name="button_edit">Edit</string>
+    <string name="button_previous">Previous</string>
+    <string name="button_next">Next</string>
     <string name="button_newEntry">Add New Entry</string>
     <string name="button_viewEntries">View Log Entries</string>
     <string name="button_clear_entries">Clear All Log Entries</string>

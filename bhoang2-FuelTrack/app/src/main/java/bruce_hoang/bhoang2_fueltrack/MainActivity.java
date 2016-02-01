@@ -19,9 +19,9 @@ import java.io.ObjectOutputStream;
 
 public class MainActivity extends AppCompatActivity {
 
-    protected static final String FILENAME = "file.sav";
+    protected static final String FILENAME = "entrylogs.txt";
     protected entryLogList entryLogs = new entryLogList();
-    protected int entryIndex;
+    protected int entryIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         Button viewLogsButton = (Button) findViewById(R.id.view_entries);
         Button newEntryButton = (Button) findViewById(R.id.new_entry);
         Button clearLogsButton = (Button) findViewById(R.id.clear_entries);
+
+        loadFromFile();
 
         newEntryButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         // Just deletes the file.
         try {
             FileOutputStream fos = openFileOutput(FILENAME, 0);
-            // took from http://stackoverflow.com/questions/3554722/how-to-delete-internal-storage-file-in-android, Jan 31, 2016
+            // took from Barry, http://stackoverflow.com/questions/3554722/how-to-delete-internal-storage-file-in-android, Jan 31, 2016
             deleteFile(FILENAME);
             fos.close();
 

@@ -3,7 +3,9 @@ package bruce_hoang.bhoang2_fueltrack;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
@@ -17,7 +19,10 @@ public class viewLogsActivity extends MainActivity {
     private TextView FuelAmount;
     private TextView FuelUnitCost;
     private TextView FuelCost;
-    private entryLog entryLog = new entryLog();
+    private TextView logNumber;
+    protected ArrayAdapter<entryLog> adapter;
+    protected entryLog entryLog = new entryLog();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +36,15 @@ public class viewLogsActivity extends MainActivity {
         FuelAmount = (TextView) findViewById(R.id.display_fuel_amount);
         FuelUnitCost = (TextView) findViewById(R.id.display_fuel_unit_cost);
         FuelCost = (TextView) findViewById(R.id.display_fuel_cost);
+        logNumber = (TextView) findViewById(R.id.log_number);
+
+
 
         Button cancelButton = (Button) findViewById(R.id.cancel);
         Button editButton = (Button) findViewById(R.id.edit);
+        Button previousButton = (Button) findViewById(R.id.previous);
+        Button nextButton = (Button) findViewById(R.id.next);
+
 
 //        Cancel button
         cancelButton.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +59,29 @@ public class viewLogsActivity extends MainActivity {
                 buttonEditLog(v);
             }
         });
+
+//        Previous button
+        previousButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (entryIndex > 0) {
+                    entryLog = entryLogs.getEntry(entryIndex - 1);
+                    displayLogInfo();
+                }
+            }
+        });
+//        Next button
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (entryIndex < (entryLogs.getCount())) {
+                    entryLog = entryLogs.getEntry(entryIndex + 1);
+                    displayLogInfo();
+                    startActivity(getIntent());
+                    finish();
+                }
+            }
+        });
     }
+
 
 //    Taken from https://github.com/SRomansky/lonelyTwitter/blob/f15monday/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java, Jan 31, 2016
     @Override
@@ -58,14 +91,14 @@ public class viewLogsActivity extends MainActivity {
         loadFromFile();
 
         if (entryLogs.getCount() > 0) {
-            entryLog = entryLogs.getEntry(0);
+            entryLog = entryLogs.getEntry(entryIndex);
             displayLogInfo();
         }
     }
 
     private void displayLogInfo(){
         // Decimal Formats
-        // Taken from http://javarevisited.blogspot.ca/2012/03/how-to-format-decimal-number-in-java.html, Jan 31, 2016
+        // Taken from Javin Paul, http://javarevisited.blogspot.ca/2012/03/how-to-format-decimal-number-in-java.html, Jan 31, 2016
         DecimalFormat df1 = new DecimalFormat("#0.0");
         DecimalFormat df3 = new DecimalFormat("#0.000");
 
@@ -76,6 +109,8 @@ public class viewLogsActivity extends MainActivity {
         FuelAmount.setText(df3.format(entryLog.getFuelAmount()));
         FuelUnitCost.setText(df1.format(entryLog.getFuelUnitCost()));
         FuelCost.setText(DecimalFormat.getCurrencyInstance().format(entryLog.getFuelCost()));
+        logNumber.setText("Entry Log #" + (entryIndex+1) + " of " + entryLogs.getCount());
+
     }
 
     public void buttonEditLog(View view){
